@@ -7,9 +7,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express()
 const PORT = process.env.PORT||3000
-const publicDirectoryPath = path.join(__dirname,'../public')
-const viewsPath = path.join(__dirname,'../templates/views')
-const partialsPath = path.join(__dirname,'../templates/partials')
+const publicDirectoryPath = path.join(__dirname,'./public')
+const viewsPath = path.join(__dirname,'./templates/views')
+const partialsPath = path.join(__dirname,'./templates/partials')
 
 app.set('view engine','hbs')
 app.set('views',viewsPath)
