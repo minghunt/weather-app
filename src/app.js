@@ -6,7 +6,7 @@ import * as untils from './untils/untils.js'
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express()
-
+const PORT = process.env.PORT||3000
 const publicDirectoryPath = path.join(__dirname,'../public')
 const viewsPath = path.join(__dirname,'../templates/views')
 const partialsPath = path.join(__dirname,'../templates/partials')
@@ -78,6 +78,6 @@ app.get(`*`, (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Server is running on port 3000.')
+app.listen(PORT, () => {
+    console.log('Server is running on port ', PORT)
 })
