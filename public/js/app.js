@@ -9,7 +9,12 @@ weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
     message1.textContent='Loading...'
     message2.textContent=''
-    fetch('/weather?address='+search.value)
+    fetch('/weather?address='+search.value, {
+        mode: 'cors',
+        headers: {
+          'Access-Control-Allow-Origin':'*'
+        }
+      })
         .then((response) => {
             response.json().then((data) => {
                 if (data.error)
