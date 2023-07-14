@@ -9,7 +9,7 @@ weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
     message1.textContent='Loading...'
     message2.textContent=''
-    fetch('http://localhost:3000/weather?address='+search.value)
+    fetch('https://weather-app-minhhung.vercel.app/weather?address='+search.value)
         .then((response) => {
             response.json().then((data) => {
                 if (data.error)
