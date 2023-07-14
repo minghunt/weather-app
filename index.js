@@ -2,7 +2,7 @@ import express from 'express'
 import hbs from 'hbs'
 import path from 'path';
 import { fileURLToPath } from 'url';
-import * as untils from './untils/untils.js'
+import * as untils from './src/untils/untils.js'
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express()
