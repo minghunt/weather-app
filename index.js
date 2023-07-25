@@ -47,13 +47,16 @@ app.get(`/weather`, (req, res) => {
         if (error)
             return res.send({error})
         else {
-            untils.forecast(latitude, longtitude, (error, forecastData) => {
+            untils.forecast(latitude, longtitude, (error, forecastData, weatherIcon) => {
                 if (error)
                     return console.log(error)
                 console.log(location)
                 console.log(forecastData)
+                console.log(weatherIcon)
+ 
                 res.send({
                     forecast:forecastData,
+                    weatherIcon: weatherIcon,
                     location:location,
                     address:req.query.address
                 })

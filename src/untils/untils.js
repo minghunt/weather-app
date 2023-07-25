@@ -29,7 +29,7 @@ const forecast = (lat, lon, callback) => {
         }
         else {
             callback(undefined, body.current.weather_descriptions + '. It is currently ' + body.current.temperature + ' degress out. The wind speed is '
-            + body.current.wind_speed+'km/h')
+            + body.current.wind_speed+'km/h',body.current.weather_icons[0])
         }
     })
 } 
